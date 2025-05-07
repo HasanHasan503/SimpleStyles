@@ -17,7 +17,7 @@ a {
   text-decoration: none;
   letter-spacing: 2px;
   border-radius: 16px;
-  z-index: 1; /*إنشاء سياق تكديس جديد*/
+  z-index: 1; /*Create a new stacking context*/
   overflow: hidden;
   transition: color 450ms linear;
   position: relative;
@@ -38,28 +38,28 @@ a::after {
   border-radius: 12px;
   background-color: #a5158c;
 
-  /* بعد هذه النقطة سيكون العنصر المزيف مباشرة فوق العنصر الاصلي و محتواه ويغطيه كاملاً*/
+  /* After this point, the pseudo element will be directly above the original element and its content and cover it completely  */
 
   z-index: -1;
 
   /*
-      هنا سيصبح العنصر المزيف فوق لون خلفية العنصر الأصلي و تحت محتوى العنصر الأصلي
+      Here the pseudo element will become above the background color of the original element and under the content of the original element
   
-      حدث هذا لأننا أنشأنا سياق تكديس جديد عندما أعطينا العنصر الاصلي قيمة
-      z-index: 1;
-      أصبح مختلف عن سياق تكديس الصفحة و يكون كالتالي من الأسفل الى الأعلى
+      This happened because we created a new stacking context when we gave us the original element value
+      Z-Index: 1;
+      It has become different from the context of the page's accumulation and is as follows from the bottom up
       
-      1. لون خلفية العنصر الاصلي
-      2. z-index  أي عنصر لديه قيمة سالبة في ال  
-      3. أي عنصر لديه قيم موجبة ويكون المحتوى النصي من ضمنها
+      1. The original element wallpaper color
+      2. Any element has a negative value in the  Z-Index
+      3. Any element that has positive values ​​and the text content is among them
   
     */
 
-  transform: scaleY(0); /*لإخفاء العنصر المزيف*/
-  transform-origin: 0% 0%; /*التأثير يبدأ من أقصى اليسار*/
+  transform: scaleY(0); /*To hide the pseudo element*/
+  transform-origin: 0% 0%; /*The effect starts from the far left*/
   transition: transform 450ms ease-in-out;
 }
 a:hover::after {
   transform: scaleY(1);
-  /*ينتقل من أقصى اليسار الى أقصى اليمين */
+  /*It moves from the far left to the far right */
 }
