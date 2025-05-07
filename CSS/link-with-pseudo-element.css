@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  display: inline-block;
+  background-color: #ff2df1;
+  color: #121212;
+  padding: 23px 40px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  border-radius: 16px;
+  z-index: 1; /*إنشاء سياق تكديس جديد*/
+  overflow: hidden;
+  transition: color 450ms linear;
+  position: relative;
+  font-size: 30px;
+}
+
+a:hover {
+  color: #ffd18e;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #a5158c;
+
+  /* بعد هذه النقطة سيكون العنصر المزيف مباشرة فوق العنصر الاصلي و محتواه ويغطيه كاملاً*/
+
+  z-index: -1;
+
+  /*
+      هنا سيصبح العنصر المزيف فوق لون خلفية العنصر الأصلي و تحت محتوى العنصر الأصلي
+  
+      حدث هذا لأننا أنشأنا سياق تكديس جديد عندما أعطينا العنصر الاصلي قيمة
+      z-index: 1;
+      أصبح مختلف عن سياق تكديس الصفحة و يكون كالتالي من الأسفل الى الأعلى
+      
+      1. لون خلفية العنصر الاصلي
+      2. z-index  أي عنصر لديه قيمة سالبة في ال  
+      3. أي عنصر لديه قيم موجبة ويكون المحتوى النصي من ضمنها
+  
+    */
+
+  transform: scaleY(0); /*لإخفاء العنصر المزيف*/
+  transform-origin: 0% 0%; /*التأثير يبدأ من أقصى اليسار*/
+  transition: transform 450ms ease-in-out;
+}
+a:hover::after {
+  transform: scaleY(1);
+  /*ينتقل من أقصى اليسار الى أقصى اليمين */
+}
