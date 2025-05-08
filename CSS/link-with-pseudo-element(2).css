@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  display: inline-block;
+  padding: 23px 45px;
+  font-size: 30px;
+  border-radius: 15px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background-color: #ff2df1;
+  color: #121212;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  transition: color 350ms ease-in-out;
+}
+a:hover {
+  color: #eee;
+}
+a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a5158c;
+  z-index: -1;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 450ms ease-in-out;
+}
+a:hover::after {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+/*
+    At the hover, the starting point of the transform becomes 0% 50% 
+    When you remove the mouse from the element, the starting point of the effect becomes
+    100% 50% 
+    That's what gives this effect.
+*/
