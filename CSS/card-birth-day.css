@@ -43,6 +43,7 @@ body {
   background-image: url(/Media/Birthday.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
+  image-rendering: high-quality;
 }
 .back {
   background-color: bisque;
@@ -53,7 +54,6 @@ body {
   font-size: 22px;
   line-height: 45px;
 }
-/*The Beginning of the Rotation Effect*/
 .card:hover {
   transform: rotateY(180deg);
 }
