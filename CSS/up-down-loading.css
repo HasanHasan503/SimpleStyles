@@ -58,3 +58,47 @@ body {
 /*
     There are many methods and techniques, but this is the method I love.
 */
+
+/*Another method*/
+
+/* * {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #333;
+}
+.load {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 160px auto;
+}
+.one,
+.tow,
+.three,
+.four {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  animation: loading 0.6s linear infinite alternate;
+}
+.one {
+  animation-delay: 0.2s;
+}
+.tow {
+  animation-delay: 0.4s;
+}
+.three {
+  animation-delay: 0.6s;
+}
+.four {
+  animation-delay: 0.8s;
+}
+@keyframes loading {
+  to {
+    opacity: 0.5;
+    transform: translate(0, -10px);
+  }
+} */
