@@ -1,6 +1,6 @@
 # 🎨 SimpleStyles — Ready-Made HTML/CSS Design Kit
 
-A repository containing simple, ready-made designs for UI elements such as greeting cards, loading screens, and styled buttons and another styled element. You can use these codes directly in your projects or customize them further!
+A repository containing simple, ready-made designs for UI elements such as greeting cards, loading screens, styled buttons and another styled element. You can use these codes directly in your projects or customize them further!
 
 ## 📂 List of Available Designs
 
