@@ -42,24 +42,20 @@ a::after {
 
   z-index: -1;
 
-  /*
-      Here the pseudo element will become above the background color of the original element and under the content of the original element
-  
-      This happened because we created a new stacking context when we gave us the original element value
-      Z-Index: 1;
-      It has become different from the context of the page's accumulation and is as follows from the bottom up
-      
-      1. The original element wallpaper color
-      2. Any element has a negative value in the  Z-Index
-      3. Any element that has positive values ​​and the text content is among them
-  
-    */
+  /* 
+   In this case, the pseudo-element will be positioned above the background color of the original element but below its content.
+   This occurs because we established a new stacking context by assigning the original element a z-Index value of 1.
+   As a result, it is distinct from the accumulation context of the page and is layered from bottom to top as follows:
+   1. The wallpaper color of the original element
+   2. Any element with a negative z-Index value
+   3. Any element with positive values, and the text content is included among them.
+  */
 
   transform: scaleY(0); /*To hide the pseudo element*/
-  transform-origin: 0% 0%; /*The effect starts from the far left*/
+  transform-origin: 0% 0%; /*The effect starts from the top*/
   transition: transform 450ms ease-in-out;
 }
 a:hover::after {
   transform: scaleY(1);
-  /*It moves from the far left to the far right */
+  /*It moves from the top to the bottom */
 }
