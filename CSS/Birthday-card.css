@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200..1000&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Jomhuria&family=Lavishly+Yours&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Quintessential&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+/*Global variable*/
+:root {
+  --background-color: #00ffff;
+  --border-color: #345592;
+  --font-color: #2f2053;
+  --paragraph-background-color: #eeeeee9c;
+  --paragraph-color: #270c66;
+  --background-color-selection: #805296;
+  --color-selection: #00ffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+/*Card*/
+.card {
+  width: 300px;
+  min-height: 420px;
+  border: 5px solid var(--border-color);
+  border-radius: 9px;
+  position: relative;
+  background-image: url(/Media/happy-birthday-with-cake-card.jpg),
+    linear-gradient(to bottom, aqua);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/*Text*/
+.text {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+
+  /*h1*/
+  h1 {
+    margin: 12px auto 14px auto;
+    text-align: center;
+    color: var(--font-color);
+    font-family: monospace;
+    font-size: 30px;
+  }
+  h1::selection {
+    background-color: var(--background-color-selection);
+    color: var(--color-selection);
+  }
+
+  /*Paragraph*/
+  p {
+    background-color: var(--paragraph-background-color);
+    color: var(--paragraph-color);
+    margin: 10px auto 13px auto;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Nobile", sans-serif;
+    font-style: italic;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 2px;
+  }
+
+  p::selection {
+    background-color: var(--background-color-selection);
+    color: var(--color-selection);
+  }
+}
