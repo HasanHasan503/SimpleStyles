@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #333;
+}
+.load {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 160px auto;
+}
+.one,
+.tow,
+.three,
+.four {
+  width: 20px;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+  animation: loading 1s linear infinite normal;
+}
+.one {
+  animation-delay: 1s;
+}
+.tow {
+  animation-delay: 1.2s;
+}
+.three {
+  animation-delay: 1.4s;
+}
+.four {
+  animation-delay: 1.6s;
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  25% {
+    opacity: 0.5;
+    transform: translate(0, -10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  75% {
+    opacity: 0.5;
+    transform: translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+/*
+    There are many methods and techniques, but this is the method I love.
+*/
