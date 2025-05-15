@@ -4,8 +4,8 @@
   --body-color: #00ffff;
   --border-color: #345592;
   --font-color: #2f2053;
-  --paragraph-background-color: #eeeeee9c;
-  --paragraph-color: #270c66;
+  /* --paragraph-background-color: #eeeeee9c; */
+  --paragraph-color: #2b233d;
   --background-color-selection: #8e5296cb;
   --color-selection: #00daf7;
   --box-shadow-color: #074e4e;
@@ -57,7 +57,6 @@ body {
 
   /*Paragraph*/
   p {
-    background-color: var(--paragraph-background-color);
     color: var(--paragraph-color);
     margin: 10px auto 13px auto;
     font-size: 20px;
@@ -66,7 +65,7 @@ body {
     font-style: italic;
     text-align: center;
     line-height: 24px;
-    letter-spacing: 2px;
+    word-spacing: 3px;
   }
 
   p::selection {
