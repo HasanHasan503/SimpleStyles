@@ -15,6 +15,9 @@ A repository containing simple, ready-made designs for UI elements such as greet
 3. **Up-Down Loading Animation**
    - Pulse Wave Loader (contains two implementation methods).
    - [Preview](https://codepen.io/Hasan-Hasan-the-lessful/pen/bNNzggq)
+4. **3D BirthDay Card**
+   -A birthday greeting card that opens in 3D *(like real cards in real life)* when hovered over, with a smooth transition effect to the right using translate.
+   - [Preview](https://codepen.io/Hasan-Hasan-the-lessful/pen/MYYLMyE)
 
 ## 🛠️ How to Use
 1. **Copy the code** from your desired file.
